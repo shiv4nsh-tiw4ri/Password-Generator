@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Protest Revolution", sans-serif;
+    color: #303131ef;
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image : linear-gradient(120deg, #a0c4fd 0%, #c2e9fb 100%);;
+}
+.container{
+    width: 100%;
+    max-width:  450px;
+}
+.container h1 {
+    color: rgb(52, 54, 54);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container {
+    position: relative;
+    background-color:  #7a7d7def ; 
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid #5f6161ef;
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+.display{
+    width:  90%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: #111010ef;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+
+.display::placeholder{
+    position: absolute;
+    top: 30%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.2rem;
+    line-height: 30px;
+    color: #ebf4f4ef;
+    opacity: 0.80;
+}
+
+.display-container button{
+    position: absolute;
+    top  : 50%;
+    right : 1.5rem;
+    transform: translateY(-40%) ;
+}
+
+.input-container{
+     width : 100%;
+     background-color: #7a7d7def;
+     border-radius: 1rem;
+     padding: 2rem;
+     border-bottom: 0.35rem solid #5f6161ef;
+}
+
+.length-container{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: rgb(64, 66, 67);
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.length-container p:nth-child(2){
+    color:  #3cb4ebef;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 1000;
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+
+}
+.strength-container p{
+   color: rgb(64, 66, 67);
+   font-size: 1.5rem;
+   font-weight: 500;
+   letter-spacing: 1px;
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;;
+}
+
+.generateBtn{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #353636ef;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 3.35rem #4eabc3ef;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: #4eabc3ef;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4eabc3ef;
+    cursor: pointer;
+    position: relative;
+    border-radius: .35rem;
+}
+
+.check input:checked{
+    background-color: #4eabc3ef;
+}
+
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: rgb(27, 27, 26);
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 10%;
+    top: -2.5px;
+    transform: translateY(-8%);
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.65rem;
+    cursor: pointer;
+    background-color: #bfc5c5ef;
+    border-radius: 1rem;
+    margin:  2rem  0 1.5rem;
+    background-image : linear-gradient(120deg, #77a8f6 0%, #95d4f1 100%);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    background-color: #4eabc3ef;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px #353636ef ;
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid #353636ef;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2.2px solid #39ebd6ef;
+    background-color: #353636ef;
+    box-shadow: 0px 0px 25px 5px #5bf7e5ef;  
+}
+.copyBtn{
+    background: transparent;
+    border: none;
+}
+.tooltip{
+    position: absolute;
+    background-color: #78c1e0;
+    color: rgb(55, 56, 57);
+    font-size: 0.75rem;
+    top: -30px;
+    left: -15px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.tooltip.active {
+    opacity: 1;
+    transform: scale(1);
+}
